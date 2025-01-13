@@ -1,0 +1,22 @@
+body {
+    background-color:#f5e6d3;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+#text {
+    color:#2c1810;
+}
+#heading {
+    margin-left:2%;
+    color:#8b4513;
+    text-decoration: none;
+}
+#heading:hover{
+    text-decoration:underline;
+}
+#current_page {
+    margin-left:2%;
+    color:#8b4513;
+    text-decoration: underline;
+    font-weight: bold;
+}
