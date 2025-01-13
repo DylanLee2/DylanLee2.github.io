@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Snow</title>
+    <link rel="icon" href="../images/snowFace.png">
+    <LINK href="../css/styles.css" rel="stylesheet" type="text/css">
+    <style>
+      #scoreSnow{
+        position:relative;
+        top:30px;
+        text-align: center;
+        font-size:30px;
+      }
+      #snowFace{
+        width: 30px;
+        height: 30px;
+        position: relative;
+        margin-top:50px;
+        margin-left:450px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div style="background-color:black; padding:1% 10%">
+      <a id="heading" href="../../arcade.html">Dylan's Snow</a>
+      <a id="headinglinks" style="margin-left:50%" href="aboutPage.html">About</a>
+      <a id="headinglinks" style="margin-left:5%"href="helpPage.html">Help</a>
+    </div>
+
+    <p id="scoreSnow">0</p>
+    <p id="restart">Press (r) to restart</p>
+    <div style="text-align: center; margin-top: 1%;">
+      <canvas id="canvas" width="850" height="620" style="border:1px solid #000000;"></canvas>
+    </div>
+    <img id="snowFace" src="../images/snowFace.png" alt = "no" style="display:none;">
+    <p id="instruction" style="text-align: center; font-size:25px;">Use AD for movement, survive as long as you can!</p>
+  </body>
+
+  <script src="../javascript/snowScript.js"></script> 
+
+</html>

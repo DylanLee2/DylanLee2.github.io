@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Gomoku</title>
+    <!--<link rel="icon" href="../images/cube_b.png">-->
+    <link href="../css/styles.css" rel="stylesheet" type="text/css">
+    <style>
+      #turn{
+        user-select:none; 
+        position:relative; 
+        top:15px; 
+        text-align: center; 
+        font-size:40px; 
+        color:white;
+      }
+      #canvas{
+        width:80vh;
+        height:80vh;
+      }
+      @media only screen and (max-width: 600px) {
+        #canvas {
+          width:20vh;
+          height:80vh;
+          margin-top: -7vh;
+        }
+      }
+    </style>
+  </head>
+
+  <body style="background-color: rgb(66,66,66)">
+    <!--#302B2C;-->
+    <div style="background-color:black; padding:1% 10%">
+      <a id="heading" href="../../arcade.html">Dylan's Games</a>
+      <a id="headinglinks" style="margin-left:50%" href="aboutPage.html">About</a>
+      <a id="headinglinks" style="margin-left:5%"href="helpPage.html">Help</a>
+    </div>
+
+    <p id="turn">White</p>
+    <p id="restart">Press (r) to restart</p>
+    <div style="text-align: center;">
+      <canvas id="canvas" width=650px height=650px style="border:1px solid #000000; margin-top: -65px;"></canvas>
+    </div>
+    <p id="instructions">First to connect 5 wins!</p>
+  </body>
+
+  <script src="../javascript/gomoku.js"></script> 
+
+</html>

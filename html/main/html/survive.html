@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Survive</title>
+    <link rel="icon" href="../images/enemy.png">
+    <link href="../css/styles.css" rel="stylesheet" type="text/css">
+    <style>
+      #dispAmmo{
+        position: relative;
+        color: rgb(204, 105, 23);
+        font-size:25px; 
+        margin-left: 28%;
+        user-select: none;
+      }
+    </style>
+  </head>
+
+  <body style="background-color: rgb(66,66,66)">
+
+    <div style="background-color:black; padding:1% 10%">
+      <a id="heading" href="../../arcade.html">Dylan's Survive</a>
+      <a id="headinglinks" style="margin-left:50%" href="aboutPage.html">About</a>
+      <a id="headinglinks" style="margin-left:5%"href="helpPage.html">Help</a>
+    </div>
+
+    <p id="score">0</p>
+    <p id="dispAmmo">Ammo: 10</p>
+    <p id="restart">Press (r) to restart</p>
+    <div style="text-align: center;">
+      <canvas id="canvas" width="900" height="650" style="border:1px solid #000000; margin-top: -90px;"></canvas>
+    </div>
+    <img id = "player" src = "../images/sprite.png" alt = "no" style="display:none;">
+    <img id = "enemy" src = "../images/enemy.png" alt = "no" style="display:none;">
+    <img id = "ammo" src = "../images/ammo.png" alt = "no" style="display:none;">
+    <img id = "deadPlayer" src = "../images/deadSprite.png" alt = "no" style="display:none;">
+    <img id = "angryPlayer" src = "../images/angrySprite.png" alt = "no" style="display:none;">
+    <p id="instructions"> Use WASD for movement and click to shoot, survive as long as you can!</p>
+  </body>
+
+  <script src="../javascript/surviveScript.js"></script>
+
+</html>

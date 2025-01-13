@@ -1,0 +1,98 @@
+*{
+  margin:0px;
+  padding:0px;
+}
+html {
+  overflow: hidden;
+  height: 100%;
+}
+body {
+  height: 100%;
+  overflow: auto;
+}
+p {
+  font-family: Verdana;
+}
+#home{
+  font-family:Verdana; 
+  font-size:3.5vh;
+}
+#home:hover{
+  font-size:3.5375vh;
+}
+#score{
+  position:relative;
+  top:30px;
+  text-align: center;
+  font-size:35px;
+  color: whitesmoke;
+}
+#restart{
+  position: relative;
+  text-align: center;
+  color:lightsalmon;
+  top:-300px;
+  font-size:28px;
+}
+#canvas{
+  margin-top: -4.5%;
+}
+#title{
+  color:royalblue;
+  font-family:Verdana;
+  font-size: 5vh; /*40px=5vh px:vh is 8:1*/
+  text-align: center;
+  user-select: none;
+}
+#instructions{
+  text-align: center;
+  top:10px;
+  font-size:2.7vh;
+  user-select: none;
+  color: white;
+}
+#explanation{
+  text-align: center;
+  font-size: 2.8vh;
+  margin-top: 5vh;
+  color:white;
+}
+#abouthelpGIF{
+  width:35vh;
+}
+/*
+For page heading
+*/
+#heading{
+  color:white;
+  font-size: 4.8vh;
+  font-family: Verdana;
+  text-decoration: none;
+}
+#headinglinks{
+  color:white;
+  font-size: 2.8vh;
+  font-family: Verdana;
+  text-decoration: none;
+}
+#headinglinks:hover{
+  text-decoration:underline;
+}
+@media only screen and (max-width: 600px) {
+  #heading{
+    font-size: 4vh;
+  }
+  #headinglinks{
+    color:white;
+    font-size: 2.4vh;
+    font-family: Verdana;
+    text-decoration: none;
+  }
+  #instructions{
+    text-align: center;
+    top:10px;
+    font-size:2.4vh;
+    user-select: none;
+    color: white;
+  }
+}
