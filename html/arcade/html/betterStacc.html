@@ -2,41 +2,48 @@
 <html>
 
   <head>
-    <title>Stacc</title>
-    <link rel="icon" href="../images/cube_b.png">
+    <title>Stack</title>
     <link href="../css/styles.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1" /> 
     <style>
       #canvas{
-        width:110vh;
-        height:82vh;
+        margin-top:-4%;
+        margin-left:15%;
+        width:65%;
+        height:75%;
       }
       @media only screen and (max-width: 600px) {
         #canvas {
-          width:45vh;
-          height:75vh;
-          margin-top:-7vh;
+          width:98%;
+          height:70%;
+          margin-top:-15%;
+          margin-left:1%;
         }
       }
     </style>
   </head>
 
-  <body style="background-color: rgb(66,66,66)">
-    <div style="background-color:black; padding:1% 10%">
+  <body>
+    <div id="header">
       <a id="heading" href="../../arcade.html">Dylan's Stack</a>
-      <a id="headinglinks" style="margin-left:53%" href="aboutPage.html">About</a>
+      <a id="headinglinks" style="margin-left:50%" href="aboutPage.html">About</a>
       <a id="headinglinks" style="margin-left:5%"href="helpPage.html">Help</a>
     </div>
+    <hr>
 
+    <br>
     <p id="score">0</p>
     <p id="restart">Press (r) to restart</p>
-    <div style="text-align: center;">
-      <canvas id="canvas" style="border:1px solid #000000;"></canvas>
-      <!-- width 850px height 640px-->
-    </div>
+
+    <canvas id="canvas" style="border:1px solid white;"></canvas>
+    <!-- width 850px height 640px-->
+
     <p id="instructions">stack as many rectangles as you can!</p>
+
+    <script src="../javascript/betterStaccScript.js"></script>
+
   </body>
 
-  <script src="../javascript/betterStaccScript.js"></script> 
+   
 
 </html>

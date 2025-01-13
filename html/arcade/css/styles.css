@@ -6,19 +6,35 @@ html {
   overflow: hidden;
   height: 100%;
 }
+#header{
+  /*background-color:#4B3B47;*/
+  padding:1% 10%;
+}
 body {
+  /*background-color:#E0D8DE;*/
+  margin-left:10%;
+  margin-right: 10%;
+  background-color: black;
   height: 100%;
   overflow: auto;
 }
 p {
-  font-family: Verdana;
+  font-family: monospace;
+  position: relative;
+  color:white;
+  font-size: 3vh;
+  text-align: center;
+}
+#canvas {
+  margin-top: 1%;
+  outline: 2px solid white;
 }
 #home{
-  font-family:Verdana; 
+  font-family:monospace; 
   font-size:3.5vh;
 }
 #home:hover{
-  font-size:3.5375vh;
+  font-size:4vh;
 }
 #score{
   position:relative;
@@ -34,12 +50,9 @@ p {
   top:-300px;
   font-size:28px;
 }
-#canvas{
-  margin-top: -4.5%;
-}
 #title{
   color:royalblue;
-  font-family:Verdana;
+  font-family:monospace;
   font-size: 5vh; /*40px=5vh px:vh is 8:1*/
   text-align: center;
   user-select: none;
@@ -49,13 +62,13 @@ p {
   top:10px;
   font-size:2.7vh;
   user-select: none;
-  color: white;
+  color: #E0D8DE;
 }
 #explanation{
   text-align: center;
   font-size: 2.8vh;
   margin-top: 5vh;
-  color:white;
+  color:#E0D8DE;
 }
 #abouthelpGIF{
   width:35vh;
@@ -66,17 +79,21 @@ For page heading
 #heading{
   color:white;
   font-size: 4.8vh;
-  font-family: Verdana;
+  font-family: monospace;
   text-decoration: none;
 }
 #headinglinks{
   color:white;
   font-size: 2.8vh;
-  font-family: Verdana;
+  font-family: monospace;
   text-decoration: none;
+  padding: 3px;
 }
 #headinglinks:hover{
-  text-decoration:underline;
+  /*transition: border-radius 0.25s;*/
+  padding: 3px;
+  outline: 2px solid white;
+  border-radius:10%;
 }
 @media only screen and (max-width: 600px) {
   #heading{
@@ -85,7 +102,7 @@ For page heading
   #headinglinks{
     color:white;
     font-size: 2.4vh;
-    font-family: Verdana;
+    font-family: monospace;
     text-decoration: none;
   }
   #instructions{
