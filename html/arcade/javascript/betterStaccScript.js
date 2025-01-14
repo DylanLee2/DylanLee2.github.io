@@ -39,14 +39,23 @@ class Player{
 function keyPress(e){
   let key = e.keyCode;
   if(alive){
-    if(key==32 && !pressed){
+    if(key==32 && !pressed){ // spacebar pressed, new rect
       pressed = true;
       newRect();
     }
   }
-  else if(!alive && key==82) // press r to restart if dead
-      newGame(); // and possibly include save score
+  else if(!alive){
+    if(key==82) // r is pressed, restart
+      newGame();
+  }
 }
+
+canvas.addEventListener("touchstart",function(e){
+  if(alive)
+    newRect();
+  else
+    newGame();
+});
 
 function newRect(){
   if(counter<1){
@@ -94,26 +103,19 @@ function releaseKey(){
 function newGame(){
   counter = 1;
   score.innerHTML = (counter-1);
-  restart.style.top = String(-250)+"px";
-  streak = 0;
   alive = true;
+  streak = 0;
   for(let i=1; i<p.length; i++){
     p.splice(i,1);
     i--;
   }
-  p[0].y=canvas.height-15;
+  p[0].y=canvas.height-35;
   p.push(new Player(p[0].x,p[0].y-p[0].h,p[0].w,p[0].h,"red",p[0].speedX));
 }
 
-canvas.addEventListener("touchstart",function(e){
-  if(alive)
-    newRect();
-  else // press r to restart if dead
-    newGame(); // and possibly include save score
-});
-
 function update(){ // game loop
   if(alive){
+    restart.style.opacity = "0";
     if(counter>0){ // 1st rectangle on
       c.fillStyle = 'rgba(1,1,1,0.4)'
       c.fillRect(0,0,canvas.width,canvas.height);
@@ -141,17 +143,20 @@ function update(){ // game loop
       p[counter].leftAndRight();
     }
   }
-  else if(!alive){
-    restart.style.top = String(250)+"px";
+  else{
+    restart.style.opacity = "1";
+    restart.style.top = String(150)+"px";
+
   }
 }
 
 c.fillStyle = 'rgb(1,1,1)'
 c.fillRect(0,0,canvas.width,canvas.height);
 var p = [];
-const startWidth = 180;
-const defaultSpeed = 2;
-p.push(new Player((canvas.width/2)-(startWidth/2),canvas.height-15,startWidth,10,"blue",defaultSpeed));
+const startWidth = canvas.width/2;
+const height=40
+const defaultSpeed = 4;
+p.push(new Player((canvas.width/2)-(startWidth/2),canvas.height-height,startWidth,height,"blue",defaultSpeed));
 p[0].draw();
 var s = [];
 var counter = 0;

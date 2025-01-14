@@ -1,15 +1,25 @@
 <!DOCTYPE html>
+<html lang="en">
 <html>
 
   <head>
     <title>Snow</title>
     <link rel="icon" href="../images/snowFace.png">
     <LINK href="../css/styles.css" rel="stylesheet" type="text/css">
+    
+    <div id="header">
+      <a id="heading" href="../../arcade.html" style="font-size: xx-large; font-weight: bold; margin-left:25%; margin-right:20%;">Dylan's Games</a>
+      <a id="heading" href="aboutPage.html">About</a>
+      <a id="heading" href="helpPage.html">Help</a>
+      <hr>
+    </div>
+      
     <style>
       #scoreSnow{
         position:relative;
-        top:30px;
+        color:black;
         text-align: center;
+        font-family: monospace;
         font-size:30px;
       }
       #snowFace{
@@ -23,20 +33,14 @@
   </head>
 
   <body>
-    <div id="header">
-      <a id="heading" href="../../arcade.html">Dylan's Snow</a>
-      <a id="headinglinks" style="margin-left:50%" href="aboutPage.html">About</a>
-      <a id="headinglinks" style="margin-left:5%"href="helpPage.html">Help</a>
-    </div>
-    <hr>
 
     <p id="scoreSnow">0</p>
     <p id="restart">Press (r) to restart</p>
-    <div style="text-align: center; margin-top: -4%;">
+    <div style="text-align: center; margin-top: -10%;">
       <canvas id="canvas" width="850" height="620" style="border:1px solid #000000;"></canvas>
     </div>
     <img id="snowFace" src="../images/snowFace.png" alt = "no" style="display:none;">
-    <p id="instruction" style="text-align: center; font-size:25px;">Use AD for movement, survive as long as you can!</p>
+    <p id="text" style="text-align: center; font-size:25px;">Use AD for movement, survive as long as you can!</p>
   </body>
 
   <script src="../javascript/snowScript.js"></script> 

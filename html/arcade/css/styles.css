@@ -1,115 +1,53 @@
-*{
-  margin:0px;
-  padding:0px;
-}
-html {
-  overflow: hidden;
-  height: 100%;
-}
-#header{
-  /*background-color:#4B3B47;*/
-  padding:1% 10%;
+* {
+  color:white;
+  font-family: monospace;
+  font-size:x-large;
 }
 body {
-  /*background-color:#E0D8DE;*/
-  margin-left:10%;
-  margin-right: 10%;
+  /*background-color:#f5e6d3;*/
   background-color: black;
-  height: 100%;
-  overflow: auto;
 }
-p {
-  font-family: monospace;
-  position: relative;
-  color:white;
-  font-size: 3vh;
+hr {
+  border: 2px solid;
+  border-radius: 5px;
+}
+#bd {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+#text {
   text-align: center;
 }
+#header {
+  padding: 1%;
+}
+#heading {
+  margin-left:2%;
+  display: inline-flex;
+  text-decoration: none;
+  user-select: none; /* Standard */
+}
+#heading:hover{
+  outline: 2px solid;
+  border-radius: 5px;
+}
 #canvas {
-  margin-top: 1%;
-  outline: 2px solid white;
-}
-#home{
-  font-family:monospace; 
-  font-size:3.5vh;
-}
-#home:hover{
-  font-size:4vh;
+  margin-top: -1%;
+  outline: 2px solid;
 }
 #score{
   position:relative;
-  top:30px;
   text-align: center;
   font-size:35px;
-  color: whitesmoke;
 }
 #restart{
   position: relative;
   text-align: center;
-  color:lightsalmon;
-  top:-300px;
-  font-size:28px;
-}
-#title{
-  color:royalblue;
-  font-family:monospace;
-  font-size: 5vh; /*40px=5vh px:vh is 8:1*/
-  text-align: center;
-  user-select: none;
-}
-#instructions{
-  text-align: center;
-  top:10px;
-  font-size:2.7vh;
-  user-select: none;
-  color: #E0D8DE;
-}
-#explanation{
-  text-align: center;
-  font-size: 2.8vh;
-  margin-top: 5vh;
-  color:#E0D8DE;
+  font-weight: bolder;
+  color:blueviolet;
+  font-size:xx-large;
 }
 #abouthelpGIF{
   width:35vh;
-}
-/*
-For page heading
-*/
-#heading{
-  color:white;
-  font-size: 4.8vh;
-  font-family: monospace;
-  text-decoration: none;
-}
-#headinglinks{
-  color:white;
-  font-size: 2.8vh;
-  font-family: monospace;
-  text-decoration: none;
-  padding: 3px;
-}
-#headinglinks:hover{
-  /*transition: border-radius 0.25s;*/
-  padding: 3px;
-  outline: 2px solid white;
-  border-radius:10%;
-}
-@media only screen and (max-width: 600px) {
-  #heading{
-    font-size: 4vh;
-  }
-  #headinglinks{
-    color:white;
-    font-size: 2.4vh;
-    font-family: monospace;
-    text-decoration: none;
-  }
-  #instructions{
-    text-align: center;
-    top:10px;
-    font-size:2.4vh;
-    user-select: none;
-    color: white;
-  }
+  margin-top: 3vh;
 }

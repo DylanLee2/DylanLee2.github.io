@@ -62,7 +62,6 @@ function releaseKey(){
 function newGame(){
   snow = []; // clear both arraylists
   leaves = [];
-  restart.style.top = String(-250)+"px";
   floorHeight = radius;
   floor.y = canvas.height-floorHeight;
   time=numScore=accel=0;
@@ -93,7 +92,9 @@ make it harder
 */
 function update(){ // game loop
   if(alive){
-    c.clearRect(0,0,canvas.width,canvas.height);
+    restart.style.opacity = "0";
+    c.fillStyle = 'rgba(255,255,255,1)' // background
+    c.fillRect(0,0,canvas.width,canvas.height);
     sun.fill();
     generateSnow(time,60); // current time, making interval (lesser is faster)
     
@@ -141,7 +142,7 @@ function update(){ // game loop
 
     p.y = canvas.height-floorHeight-p.r; // keeps player on platform
     if(p.x>canvas.width && p.speedX>0)
-      p.x=-p.r;
+      p.x=-2*p.r;
     else if(p.x-p.r<0 && p.speedX<0)
       p.x=canvas.width;
 
@@ -154,7 +155,8 @@ function update(){ // game loop
     alive = (p.r >= 0.1); // dies if radius is too small
   }
   else if(!alive){
-    restart.style.top = String(250)+"px";
+    restart.style.opacity = "1";
+    restart.style.top = String(150)+"px";
   }
 }
 var degree = 0;

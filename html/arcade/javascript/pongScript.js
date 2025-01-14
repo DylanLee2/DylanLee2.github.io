@@ -30,7 +30,6 @@ class Ball{
 
     this.speedX = (Math.random()<0.5)?ballSpeed : -ballSpeed;
     this.speedY = (Math.random()<0.5)?ballSpeed : -ballSpeed;
-
   }
   draw(){
     c.beginPath();
@@ -77,7 +76,8 @@ function releaseKey(){
 }
 
 function newGame(){
-  alert("new game"); // placeholder
+  //alert("new game"); // placeholder
+  alive=true;
   score1=score2=0;
 }
 
@@ -95,7 +95,8 @@ function bot(mode,player){
 
 function update(){ // game loop
   if(alive){
-    c.fillStyle = 'rgba(1,1,1,0.4)'
+    restart.style.opacity = "0";
+    c.fillStyle = 'rgba(1,1,1,0.4)';
     c.fillRect(0,0,canvas.width,canvas.height);
     c.fillStyle = 'rgb(255,255,255)'
     c.fillRect(canvas.width/2,0,3,canvas.height);
@@ -106,8 +107,8 @@ function update(){ // game loop
     if((b.y-b.r<0)||(b.y+b.r>canvas.height))
       b.speedY*=-1;
     
-    if((b.x<=p1.x+p1.w && b.x+3>p1.x+p1.w && b.y>p1.y && b.y+b.r<p1.y+p1.h)||(b.x+b.r>=p2.x && b.x+b.r<p2.x+4 && b.y>p2.y && b.y+b.r<p2.y+p2.h))
-      b.speedX*=-1;
+    if((b.x-b.r<=p1.x+p1.w && b.x+3>p1.x+p1.w && b.y>p1.y && b.y+b.r<p1.y+p1.h)||(b.x+b.r>=p2.x && b.x+b.r<p2.x+4 && b.y>p2.y && b.y+b.r<p2.y+p2.h))
+      b.speedX*=-1.1;
     
     else if(b.x+b.r<0){
       score2++;
@@ -119,6 +120,8 @@ function update(){ // game loop
       score.innerHTML = score1 + " " + score2;
       b.serve();
     }
+    if(score1>2 || score2>2)
+      alive=false;
     /*
     c.font = "30px Verdana";
     c.fillStyle = "WHITE";
@@ -127,8 +130,10 @@ function update(){ // game loop
     */
     
   }
-  else if(!alive)
-    restart.style.top = String(250)+"px";
+  else {
+    restart.style.opacity = "1"
+    restart.style.top = String(100)+"px";
+  }
 }
 
 var alive = true, canMove = true;

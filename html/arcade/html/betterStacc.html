@@ -1,44 +1,28 @@
 <!DOCTYPE html>
+<html lang="en">
 <html>
 
   <head>
     <title>Stack</title>
     <link href="../css/styles.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1" /> 
-    <style>
-      #canvas{
-        margin-top:-4%;
-        margin-left:15%;
-        width:65%;
-        height:75%;
-      }
-      @media only screen and (max-width: 600px) {
-        #canvas {
-          width:98%;
-          height:70%;
-          margin-top:-15%;
-          margin-left:1%;
-        }
-      }
-    </style>
+    <div id="header">
+      <a id="heading" href="../../arcade.html" style="font-size: xx-large; font-weight: bold; margin-left:25%; margin-right:20%;">Dylan's Games</a>
+      <a id="heading" href="aboutPage.html">About</a>
+      <a id="heading" href="helpPage.html">Help</a>
+      <hr>
+    </div>
   </head>
 
   <body>
-    <div id="header">
-      <a id="heading" href="../../arcade.html">Dylan's Stack</a>
-      <a id="headinglinks" style="margin-left:50%" href="aboutPage.html">About</a>
-      <a id="headinglinks" style="margin-left:5%"href="helpPage.html">Help</a>
-    </div>
-    <hr>
 
-    <br>
     <p id="score">0</p>
     <p id="restart">Press (r) to restart</p>
+    <div style="text-align:center; margin-top:-10%;">
+      <canvas id="canvas" width="800" height="700" style="border:1px solid #000000;"></canvas>
+    </div>
 
-    <canvas id="canvas" style="border:1px solid white;"></canvas>
-    <!-- width 850px height 640px-->
-
-    <p id="instructions">stack as many rectangles as you can!</p>
+    <p id="text">stack as many rectangles as you can!</p>
 
     <script src="../javascript/betterStaccScript.js"></script>
 

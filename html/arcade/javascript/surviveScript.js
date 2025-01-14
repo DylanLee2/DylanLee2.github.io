@@ -201,6 +201,7 @@ function isColliding(a,b){
 
 function update(){
   if(alive){
+    restartText.style.opacity = "0";
     c.fillStyle = 'rgba(1,1,1,0.4)' // background
     c.fillRect(0,0,canvas.width,canvas.height);
     p.updatePosition();
@@ -227,7 +228,8 @@ function update(){
       enemies[i].speedY = Math.sin(angle);
       if(isColliding(enemies[i],p)){
         p.switchImage("deadPlayer");
-        restartText.style.top = String(250)+"px";
+        restartText.style.opacity = "1";
+        restartText.style.top = String(150)+"px";
         alive = false;
         break;
       }

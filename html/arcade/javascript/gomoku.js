@@ -2,6 +2,7 @@ const canvas = document.getElementById("canvas");
 const c = canvas.getContext("2d");
 var restart = document.getElementById("restart");
 document.onkeydown = keyPress;
+restart.style.opacity = "0";
 
 class board{
   constructor(){
@@ -45,7 +46,7 @@ class dot{
   }
 }
 
-function checkWin(winAmount){
+function checkWin(){
   // method: check from placed point, diagonals,verticals,horizontals
   let horizCol=0,vertCol=0,color=0,checkNum=2; // default black for checkNum
   if(turn)
@@ -108,23 +109,27 @@ function checkWin(winAmount){
 
 function win(){
   alive=false;
+  restart.style.opacity = "1";
   restart.style.top = String(250)+"px";
-  document.getElementById("turn").style.color = "black";
-  document.getElementById("turn").innerHTML = "Black won!";
   if(turn){
     document.getElementById("turn").style.color = "white";
     document.getElementById("turn").innerHTML = "White won!";
+  }
+  else{
+    document.getElementById("turn").style.color = "black";
+    document.getElementById("turn").innerHTML = "Black won!";
   }
 }
 
 function keyPress(e){
   let key = e.keyCode;
-  if(!alive && key==82) // press r to restart
+  if(!alive && key==82){ // press r to restart
+      restart.style.opacity = "0";
       newGame(); // and possibly include save score
+  }
 }
 
 function newGame(){
-  restart.style.top = String(-250)+"px";
   document.getElementById("turn").style.color = "white";
   document.getElementById("turn").innerHTML = "White";
   b = new board();
@@ -147,6 +152,7 @@ let canvasElem = document.querySelector("canvas");
 canvasElem.addEventListener("mousedown", function(e)
 {
   if(alive){
+    restart.style.opacity = "0";
     mousePosition(canvasElem, e);
     mouseX = Math.floor(mouseX-mouseX%(canvas.width/20)+(canvas.width/40));
     mouseY = Math.floor(mouseY-mouseY%(canvas.height/20)+(canvas.height/40));
@@ -159,7 +165,7 @@ canvasElem.addEventListener("mousedown", function(e)
         document.getElementById("turn").style.color = "black";
         document.getElementById("turn").innerHTML = "Black";
       }
-      else if(turn==false){ // false is black
+      else{ // false is black
         bd[elementX][elementY] = 2;
         document.getElementById("turn").style.color = "white";
         document.getElementById("turn").innerHTML = "White";

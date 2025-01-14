@@ -5,6 +5,14 @@
     <title>Gomoku</title>
     <!--<link rel="icon" href="../images/cube_b.png">-->
     <link href="../css/styles.css" rel="stylesheet" type="text/css">
+
+    <div id="header">
+      <a id="heading" href="../../arcade.html" style="font-size: xx-large; font-weight: bold; margin-left:25%; margin-right:20%;">Dylan's Games</a>
+      <a id="heading" href="aboutPage.html">About</a>
+      <a id="heading" href="helpPage.html">Help</a>
+      <hr>
+    </div>
+
     <style>
       #turn{
         user-select:none; 
@@ -13,10 +21,6 @@
         text-align: center; 
         font-size:40px; 
         color:white;
-      }
-      #canvas{
-        width:80vh;
-        height:80vh;
       }
       @media only screen and (max-width: 600px) {
         #canvas {
@@ -29,19 +33,12 @@
   </head>
 
   <body>
-    <div id="header">
-      <a id="heading" href="../../arcade.html">Dylan's Gomok</a>
-      <a id="headinglinks" style="margin-left:50%" href="aboutPage.html">About</a>
-      <a id="headinglinks" style="margin-left:5%"href="helpPage.html">Help</a>
-    </div>
-    <hr>
-
     <p id="turn">White</p>
     <p id="restart">Press (r) to restart</p>
-    <div style="text-align: center;">
-      <canvas id="canvas" width=650px height=650px style="border:1px solid #000000; margin-top: -65px;"></canvas>
+    <div style="text-align: center; margin-top:-9%;">
+      <canvas id="canvas" width=650 height=650></canvas>
     </div>
-    <p id="instructions">First to connect 5 wins!</p>
+    <p id="text">First to connect 5 wins!</p>
   </body>
 
   <script src="../javascript/gomoku.js"></script> 

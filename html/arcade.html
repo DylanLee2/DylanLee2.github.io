@@ -1,11 +1,86 @@
 <!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dylan's Games</title>
+        <link rel="stylesheet" href="arcade/css/styles.css">
+        <div id="header">
+          <a id="heading" href="arcade.html" style="font-size: xx-large; font-weight: bold; margin-left:25%; margin-right:20%;">Dylan's Games</a>
+          <a id="heading" href="arcade/html/aboutPage.html">About</a>
+          <a id="heading" href="arcade/html/helpPage.html">Help</a>
+          <hr>
+        </div>
+        <style>
+          #pic{
+            width:25vh;
+            height:25vh;
+            outline: 2px solid white;
+            border-radius:5%;
+          }
+          #pic:hover{
+            transition: border-radius 0.25s;
+            border-radius: 10%;
+          }
+          .column {
+            float: left;
+            margin-left:20%;
+            margin-top: 5%;
+          }
+        </style>
+    </head>
+
+    <body>
+      <div id="bd">
+        <div class="column">
+          <a href="arcade/html/betterStacc.html"><img src="arcade/images/stacc.png" alt="stackgame" id="pic"></a>
+          <p id="text">stack</p>
+        </div>
+        <div class="column">
+          <a href="arcade/html/survive.html"><img src="arcade/images/surivive.png" alt="survive" id="pic"></a>
+          <p id="text">survive</p>
+        </div>
+        <div class="column">
+          <a href="arcade/html/snow.html"><img src="arcade/images/snowGame.png" alt="snow" id="pic"></a>
+          <p id="text">snow</p>
+        </div>
+        <div class="column">
+          <a href="arcade/html/pong.html"><img src="arcade/images/pongGame.png" alt="pong" id="pic"></a>
+          <p id="text">pong</p>
+        </div>
+        <div class="column">
+          <a href="arcade/html/gomoku.html"><img src="arcade/images/gomokuGame.png" alt="gomoku" id="pic"></a>
+          <p id="text">gomoku</p>
+        </div>
+      </div>
+
+        <!--JavaScript Files-->
+        <script src="js/script.js"></script>
+    </body>
+
+</html>
+
+<!--
+
+<!DOCTYPE html>
 <html>
 
   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
     <title>Dylan's Games</title>
     <link rel="icon" href="arcade/images/icon.png">
-    <link href="arcade/css/styles.css" rel="stylesheet" type="text/css">
-    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    <link  rel="stylesheet" href="arcade/css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <div id="header">
+      <a id="home" href="arcade.html"><h1>Dylan's Games</h1></a>
+      <a id="heading" href="arcade/html/aboutPage.html">About</a>
+      <a id="heading" href="arcade/html/helpPage.html">Help</a>
+    </div>
+    <hr> 
       <style>
         #pic{
           /*width:260px;
@@ -13,51 +88,41 @@
           width:26vh;
           height:26vh;
           outline: 2px solid white;
-          border-radius:5vh;
-          margin-left:2vh;
-          margin-top:3vh;
+          border-radius:10%;
           transition: border-radius 0.25s;
         }
         #pic:hover{
-          border-radius: 8vh;
+          border-radius: 15%;
         }
         .column {
           float: left;
-          margin-left:4vh;
-          margin-top: 6vh;
+          margin-top: 5%;
           width: 30vh;
         }
       </style>
   </head>
 
   <body>
-    <div id="header">
-      <a id="heading" href="arcade.html">Dylan's Games</a>
-      <a id="headinglinks" style="margin-left:50%" href="arcade/html/aboutPage.html">About</a>
-      <a id="headinglinks" style="margin-left:5%"href="arcade/html/helpPage.html">Help</a>
-    </div>
-    <hr>
-
-    <div style="padding-left:10%; padding-right:10%;">
+    <div style="padding-left:10%; padding-right:10%; margin-left:15%">
       <div class="column">
         <a href="arcade/html/betterStacc.html"><img src="arcade/images/stacc.png" alt="stackgame" id="pic"></a>
-        <p>stack</p>
+        <p id="text">stack</p>
       </div>
       <div class="column">
         <a href="arcade/html/survive.html"><img src="arcade/images/surivive.png" alt="survive" id="pic"></a>
-        <p>survive</p>
+        <p id="text">survive</p>
       </div>
       <div class="column">
         <a href="arcade/html/snow.html"><img src="arcade/images/snowGame.png" alt="snow" id="pic"></a>
-        <p>snow</p>
+        <p id="text">snow</p>
       </div>
       <div class="column">
         <a href="arcade/html/pong.html"><img src="arcade/images/pongGame.png" alt="pong" id="pic"></a>
-        <p>pong</p>
+        <p id="text">pong</p>
       </div>
       <div class="column">
         <a href="arcade/html/gomoku.html"><img src="arcade/images/gomokuGame.png" alt="gomoku" id="pic"></a>
-        <p>gomoku</p>
+        <p id="text">gomoku</p>
       </div>
 
     </div>
@@ -65,3 +130,7 @@
   </body>
 
 </html>
+
+
+
+-->
